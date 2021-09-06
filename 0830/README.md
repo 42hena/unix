@@ -1,3 +1,37 @@
+# 2021년 8월 30일
+
+# 유닉스 시스템 프로그래밍의 정의
+- 유닉스에서 제공하는 시스템 호출을 사용해 프로그램을 작성하는 것을 의미
+
+# 시스템 호출
+- 유닉스 시스템이 제공하는 서비스를 이용해 프로그램을 작성할 수 있도록 제공되는 프로그래밍 기본 인터페이스
+- 기본적인 형태는 c 언어의 함수 형태로 제공
+
+# 라이브러리 함수
+- 라이브러리: 미리 컴파일된 함수들을 묶어서 제공하는 특수한 형태의 파일
+- 자주 사용하는 기능을 독립적으로 분리하여 구현해둠으로써 프로그램의 개발과 디버깅을 쉽게 컴파일을 좀 더 빠르게 할 수 있다.
+- /lib, /url/lib에 위치하며 lib\*.a 또는lib\*.so 형태로 제공
+
+# 시스템 호출과 라이브러리 함수의 비교
+시스템 호출: 커널의 해당 서비스 모듈을 직접 호출하여 작업하고 결과를 리턴
+라이브러리 함수: 일반적으로 커널 모듈을 직접 호출안함
+![image (2)](https://user-images.githubusercontent.com/86128914/132170753-411a767e-dc28-4282-8de6-2bd616cac01b.png)
+
+시스템 호출:man 페이지가 섹션 2에 속함
+![image (3)](https://user-images.githubusercontent.com/86128914/132171239-0d48a27d-24a6-4a59-9649-3bfca46d6af6.png)
+라이브러리 함수:man 페이지가 섹션 3에 속함
+![image (4)](https://user-images.githubusercontent.com/86128914/132171293-b29bed6e-bbb9-41df-bfc9-d72e9a7bb043.png)
+
+# 시스템 호출의 오류 처리 방법
+- 성공하면 0을 리턴, 실패하면 -1을 리턴
+- 전역변수 errno에 오류 코드 저장: man 페이지에서 코드값 확인 가능
+![image (5)](https://user-images.githubusercontent.com/86128914/132171414-e60b4706-92a5-4cad-adcd-753435baf243.png)
+
+# 라이브러리 함수의 오류 처리 방법
+- 오류가 발생하면 NULL을 리턴, 함수의 리턴값이 int형이면 -1을 리턴
+- errno 변수에 오류 코드 저장
+![image](https://user-images.githubusercontent.com/86128914/132171683-9e957be2-4aca-46e0-b1ad-9590836d949e.png)
+
 # UNIX 기본 명령
 
 # 로그인/로그아웃
@@ -57,3 +91,6 @@
 예시
 ![image](https://user-images.githubusercontent.com/86128914/132169588-1d1453d9-f737-4731-a45a-ff71caa57945.png)
 
+# GNU C 컴파일러: gcc
+- c컴파일러 사용
+![image (1)](https://user-images.githubusercontent.com/86128914/132169973-559d37fe-bd35-4352-bd6b-cb0ec2fd8ad5.png)
