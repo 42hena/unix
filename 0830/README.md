@@ -1,3 +1,5 @@
+# UNIX 기본 명령
+
 # 로그인/로그아웃
 |명령|기능|주요 옵션|예제|
 |----|----|----|----|
@@ -39,3 +41,19 @@
 |저장하고 종료|:wq! 또는 ZZ|저장않고 종료|:q!|
 |행 붙이기|J(shift-j)|화면다시표시|ctrl+l|
 |행 번호 보이기|:set nu|행 번호 없애기|:set nonu|
+
+#기타 명령
+|명령|기능|주요 옵션|예제|
+|----|----|----|----
+|su|사용자 계정 변경|-: 변경할 사용자의 환경 초기화 파일 실행|su<br />su -<br /> su - han02|
+|tar|파일/디렉토리 묶기|-cvf: tar파일 생성<br />-txf: tar파일 내용 보기<br />-xvf: tar파일 풀기|tar cvf a.tar * <br />tar tvf a.tar<br />tar xvf a.tar|
+|whereis|파일 위치 검색| - |whereis ls|
+|which|파일 위치 검색| - |which telnet|
+
+#컴파일이란
+- 텍스트로 작성한 프로그램을 시스템이 이해할 수 있는 기계어로 변환하는 과정
+- 보통 컴파일 과정과 라이브러리 링크 과정을 묶어서 수행하는 것을 의미
+
+예시
+![image](https://user-images.githubusercontent.com/86128914/132169588-1d1453d9-f737-4731-a45a-ff71caa57945.png)
+
