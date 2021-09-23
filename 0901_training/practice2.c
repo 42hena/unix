@@ -13,6 +13,10 @@ int main(int argc, char *argv[])
         printf("Usable Options : -a –u –h\n");
     else{
         if (strcmp(argv[1], "-a") == 0)
+            printf("Welcome to Unix System Programming World!!!\n");
+        else if (strcmp(argv[1], "-u") == 0)
+            printf("Nice to meet argv[2]\n");
+        else if (strcmp(argv[1], "-h") == 0)
+            printf("Usable Options : -a –u –h\n");
     }
-
 }
